@@ -19,7 +19,7 @@
 ~~~
 import Foundation
 
-class SimpleIconAndLabelItemView: UIView {
+@IBDesignable class SimpleIconAndLabelItemView: UIView {
     @IBOutlet var contView: UIView!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -45,6 +45,9 @@ class SimpleIconAndLabelItemView: UIView {
     }
 }
 ~~~
+
+3. contView 需拉线连接到 Cont View 上
+4. @IBDesignable关键字表示在其它xib上应用当前类时能在xib上实时看到封装效果
 
 之后就能愉快的在IB中使用当前封装的xib了，拖动一个View到IB指定位置，然后把
 Custom Class 改成封装的SimpleIconAndLabelItemView即可，这样就成功的复用了封装的xib。
