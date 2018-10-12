@@ -5,13 +5,13 @@
 目的：使用xib便利布局屏幕适配UI的优势
 
 ### 1.新建一个带xib的类
-![](0.png)
+![](Image/0.png)
 
 ### 2.绑定xib的File Owner
-![](1.png)
+![](Image/1.png)
 
 选中File's Owner 右边红框对应位置改成对应的封装类名
-![](2.png)
+![](Image/2.png)
 
 
 ### 3.SimpleIconAndLabelItemView.swift 代码实现如下
