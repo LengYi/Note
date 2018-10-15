@@ -11,4 +11,8 @@ iOS 开发常用工具教程，开发方案笔记总结
 * 4.0 Swift
 	* 4.1 数组
 		* 4.1.1 [模型数组去重](https://github.com/LengYi/Note/blob/master/4.0/4.1/4.1.1/模型数组去重.md)
+	* 4.2 [For常用遍历方式](https://github.com/LengYi/Note/blob/master/4.0/4.2/For.md)
+	* 4.3 [闭包进阶](https://github.com/LengYi/Note/blob/master/4.0/4.3/Closure.md)
+	* 4.4 [枚举进阶](https://github.com/LengYi/Note/blob/master/4.0/4.4/Enum.md)
+	* 4.5 [延迟加载方法](https://github.com/LengYi/Note/blob/master/4.0/4.5/DelayExcuse.md)
 	
