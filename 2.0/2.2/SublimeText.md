@@ -15,7 +15,7 @@
 + 或者快捷键 command + shift + p
 + 打开如上图所示
 + 输入pci，选中“PackageControl: Install Package”并回车
-+ 再弹出的输入框，输入pretty json 搜索插件如下图所示，选中第一行回车或者双击鼠标完成安装
++ 在弹出的输入框，输入pretty json 搜索插件如下图所示，选中第一行回车或者双击鼠标完成安装
 
 ![](Image/3.png)
 
