@@ -23,4 +23,6 @@ iOS 开发常用工具教程，开发方案笔记总结
 	* 4.5 [延迟加载方法](https://github.com/LengYi/Note/blob/master/4.0/4.5/DelayExcuse.md)
 * 5.0 技术书籍
 	* 5.1 Swift
-		* 5.1.1 [TheSwiftProgrammingLanguage中文完整版](https://github.com/LengYi/Note/blob/master/5.0/5.1/5.1.1/TheSwiftProgrammingLanguage中文完整版.pdf) 	 
+		* 5.1.1 [TheSwiftProgrammingLanguage中文完整版](https://github.com/LengYi/Note/blob/master/5.0/5.1/5.1.1/TheSwiftProgrammingLanguage中文完整版.pdf) 
+* 6.0 设计模式
+	* 6.1 [依赖注入解耦] (https://github.com/LengYi/Note/blob/master/6.0/6.1/deIn.md)	 
