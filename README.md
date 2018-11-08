@@ -34,6 +34,8 @@ iOS 开发常用工具教程，开发方案笔记总结
 	* 1.2 [Protocol(协议)](https://github.com/LengYi/Note/blob/master/6.0/1.2/Protocol.md)
 * 项目
 	* [多语言适配及App内部语言切换](https://github.com/LengYi/MultiLanguage/tree/master)
+* 代码功能片段
+	* [UISearchBar](8.0/UISearchBar/searchBar.md) 
 *  常见问题总结
 	* 1.0 [iOS10 国行 网络权限问题](7.0/1.0/iOS10.md) 
 
