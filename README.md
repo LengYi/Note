@@ -10,7 +10,6 @@ iOS 开发常用工具教程，开发方案笔记总结
 		* 1.0 [iOS模拟器安装App](2.0/2.1/1.0/iOS模拟器安装App.md)
 		* 1.1 [模拟器屏幕录制](2.0/2.1/1.1/record.md) 
 		* 1.2 [低版本Xcode支持高版本iOS真机测试](2.0/2.1/1.2/run.md)
-		* 1.3 [iTunes降级下载App历史低版本安装包](2.0/2.1/1.3/history.md)
 	* 2.2 [SublimeText](https://github.com/LengYi/Note/blob/master/2.0/2.2/SublimeText.md)
 	* 2.3 [Charles](https://github.com/LengYi/Note/blob/master/2.0/2.3/Charles.md)
 	* 2.4 Git
@@ -35,7 +34,7 @@ iOS 开发常用工具教程，开发方案笔记总结
 	* 1.2 [Protocol(协议)](https://github.com/LengYi/Note/blob/master/6.0/1.2/Protocol.md)
 * 方案
 	* [多语言适配及App内部语言切换](https://github.com/LengYi/MultiLanguage/tree/master)
-	* [App数据缓存策略](9.0/1.0)
+	* [App数据缓存策略](9.0/1.0/cache.md)
 * 代码功能片段
 	* [UISearchBar](8.0/UISearchBar/searchBar.md) 
 *  常见问题总结
