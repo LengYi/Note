@@ -2,7 +2,7 @@
 
 ## 原则
 + 无网络或者网络很差时能及时显示界面，提升用户体验
-+ 有网络时更新本地缓存数据
++ 请求到新数据时更新本地缓存数据
 
 ## 数据缓存方式
 + 缓存至Plist文件
@@ -15,6 +15,76 @@
 ![](Image/1.png)
 
 ## 数据库设计
+### Realm
+~~~
+import RealmSwift
+
+public class CacheModel {
+	 @objc dynamic var cacheKey: String = ""
+    @objc dynamic var cacheString: String = ""
+    var json: JSON {
+        set {
+            if let string = newValue.rawString() {
+                self.cacheString = string
+            } else {
+                self.cacheString = ""
+            }
+        }
+        get {
+            return  JSON(parseJSON: self.cacheString)
+        }
+    }
+}
+
+extension CacheModel {
+    public static func saveCache(key: String, json: JSON) {
+        guard let realm = try? Realm() else {
+            return
+        }
+        
+        if let model = realm.objects(CacheModel.self).filter(NSPredicate(format: "cacheKey = %@", key)).first {
+            try? realm.write {
+                model.json = json
+            }
+        } else {
+            let model = CacheModel()
+            model.json = json
+            model.cacheKey = key
+            try? realm.write {
+                realm.add(model)
+            }
+        }
+    }
+    
+    public static func loadCache(key: String) -> JSON {
+        guard let realm = try? Realm() else {
+            return JSON.null
+        }
+        
+        if let model = realm.objects(CacheModel.self).filter(NSPredicate(format: "cacheKey = %@", key)).first {
+            return model.json
+        }
+        
+        return JSON.null
+    }
+    
+    public static func deleteCache(key: String) {
+        guard let realm = try? Realm() else {
+            return
+        }
+        if let model = realm.objects(CacheModel.self).filter(NSPredicate(format: "cacheKey = %@", key)).first {
+            realm.delete(model)
+        }
+    }
+}
+~~~
+
+### SQLite
+![](Image/2.png)
+![](Image/3.png)
+
++ cache_data 是缓存的二进制数据
++ cache_key 是缓存时唯一的key，通过唯一的key就可以获取的对应的缓存数据
 
 ## 缓存key设计： URL+参数
 
@@ -60,3 +130,14 @@
         return url
     }
 ~~~
+
+## 思考 
+缓存爆炸造成垃圾数据 
+
++ 将缓存保存至沙盒Library中，在系统存储空间不足时，系统会自动清理该文件中的内容
++ 添加清理缓存的功能用户自行清理
++ 设定一个时间阀值和缓存大小阀值，这两个值其中一个满足条件则自动清理一部分垃圾数据或者全部清理
+
+## 好处
++ 方便添加离线下载功能，比如新闻类App，离线后无网络依然能够阅读
++ 方便添加清理缓存功能
