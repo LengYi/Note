@@ -33,8 +33,9 @@ iOS 开发常用工具教程，开发方案笔记总结
 * 6.0 设计模式
 	* 1.1 [依赖注入解耦](https://github.com/LengYi/Note/blob/master/6.0/1.1/deIn.md)
 	* 1.2 [Protocol(协议)](https://github.com/LengYi/Note/blob/master/6.0/1.2/Protocol.md)
-* 项目
+* 方案
 	* [多语言适配及App内部语言切换](https://github.com/LengYi/MultiLanguage/tree/master)
+	* [App数据缓存策略](9.0/1.0)
 * 代码功能片段
 	* [UISearchBar](8.0/UISearchBar/searchBar.md) 
 *  常见问题总结
