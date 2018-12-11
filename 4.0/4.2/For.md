@@ -47,4 +47,9 @@ for (animalName, legCount) in numberOfLegs {
     print("\(animalName)s have \(legCount) legs")
 }
 
+// 数组拼接字符串
+let arr = ["1","2","3","4"]
+arr.map{ return "\($0)"}.joined(separator: ",")
+
+输出结果：1,2,3,4
 ~~~
