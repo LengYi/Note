@@ -18,7 +18,8 @@ iOS 开发常用工具教程，开发方案笔记总结
 		* 2.4.2 [Git常用操作命令](https://github.com/LengYi/Note/blob/master/2.0/2.4/2.4.2/command.md)
 		* 2.4.3 [SourceTree 忽略提交文件配置](https://github.com/LengYi/Note/blob/master/2.0/2.4/2.4.3/gitignore.md)
 		* 2.4.4 [SourceTree Git-Flow工作流](https://github.com/LengYi/Note/blob/master/2.0/2.4/2.4.4/SourceTree.md)
-	* 2.5 [iTunes降级下载App历史安装包](2.0/2.5/) 
+		* 2.4.5 [SourceTree 回滚Git到历史节点](2.0/2.4/2.4.5/Rollback.md)
+	* 2.5 [iTunes降级下载App历史安装包](2.0/2.5/history.md) 
 * 3.0 IB
 	* 3.1 [Swift IB开发之xib封装复用](https://github.com/LengYi/Note/blob/master/3.0/3.1/xib.md) 
 * 4.0 Swift
