@@ -39,6 +39,7 @@ iOS 开发常用工具教程，开发方案笔记总结
 * 方案
 	* [多语言适配及App内部语言切换](https://github.com/LengYi/MultiLanguage/tree/master)
 	* [App数据缓存策略](9.0/1.0/cache.md)
+	* [搭建VPN科学上网环境](12.0/1.0/vpn/vpn.md)
 * 代码功能片段
 	* [UISearchBar](8.0/UISearchBar/searchBar.md) 
 *  常见问题总结
