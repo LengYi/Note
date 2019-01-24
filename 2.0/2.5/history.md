@@ -58,6 +58,8 @@ sudo rm -rf /Library/Documentation/Applications/iTunes/Acknowledgements.rtf /Lib
 选中iTunes，选择偏好设置
 ![](Image/6.png) 
 
+打开设置->软件更新->高级 取消各种更新
+
 ## 恢复 csrutil
 参照关闭流程
 
