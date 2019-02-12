@@ -20,6 +20,13 @@ void (^SayHello)(void) = ^{
 ~~~
 输出结果：an
 
++ 定义block类型
+
+~~~
+typedef void (^ClickBlock)(NSString *);
+@property (nonatomic, copy) ClickBlock block;
+~~~
+
 ## 使用场景
 + block 作为类属性
 + block 作为方法参数
