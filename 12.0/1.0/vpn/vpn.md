@@ -21,3 +21,9 @@
 ![](Image/4.png)
 
 将步骤五下载的host.localdomain.ovpn拖动到上图的配置中，然后点击连接就可以开始愉快的翻墙了。
+
+七、检查IP是否被封 [检查](https://kiwivm.64clouds.com/main-exec.php?mode=blacklistcheck)
+
+[付费更换IP](https://bwh8.net/ipchange.php)
+
+[被封处理](https://www.bandwagonhost.net/1312.html)
