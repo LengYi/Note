@@ -86,7 +86,7 @@ extension CacheModel {
 + cache_data 是缓存的二进制数据
 + cache_key 是缓存时唯一的key，通过唯一的key就可以获取的对应的缓存数据
 
-## 缓存key设计： URL+参数
+## Swift缓存key设计： URL+参数
 
 + 一个模块一个URL，则使用URL作为唯一key，比如一些只是简单get的请求列表
 + 不同模块同一个基本URL，通过参数区分获取数据，则使用URL+参数作为唯一key
@@ -131,6 +131,7 @@ extension CacheModel {
     }
 ~~~
 
+## [OC 缓存Key设计](oc-key.md)
 ## 思考 
 缓存爆炸造成垃圾数据 
 
