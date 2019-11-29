@@ -44,3 +44,89 @@ Release分支作为QA回归测试的版本依据，测试完毕并bug修复完�
 + 创建develop分支（开发人员不需要关注此步骤，项目负责人已完成该步骤推送）
 
 ![](Image/3_1.png)
+
+　第一步是给默认的master配备一个develop分支。一种简单的做法是：让一个开发者在本地建立一个空的develop分支，然后把它推送到服务器。
+git branch develop
+git push -u origin develop
+ 
+develop分支将包含项目的所有历史，而master会是一个缩减版本。现在，其他开发者应该克隆（clone）中央仓库，并且为develop创建一个追踪分支。
+ 
+git clone ssh://user@host/path/to/repo.git
+git checkout -b develop origin/develop
+
++ A和B开发新功能
+
+![](Image/3_2.png)
+
+分别开发新功能开始。他们俩各自建立了自己的分支。注意，他们在创建分支时，父分支不能选择master，而要选择develop。
+ 
+git checkout -b some-feature develop
+
++  A把他的功能开发好了
+
+在提交过几次代码之后，A觉得他的功能做完了，她可以提出一个将她所完成的功能合并入develop分支的请求，她可以自行将她的代码合并入本地的develop分支，然后再推送到中央仓库，团队的代码评审（Code Review），须在此步完成，像这样：
+
+~~~
+git pull origin develop
+git checkout develop
+git merge some-feature
+git push
+git branch -d some-feature
+~~~
+
+第一条命令确保了本地的develop分支拥有最新的代码——这一步必须在将功能代码合并之前做！注意，新开发的功能代码永远不能直接合并入master。必要时，还需要解决在代码合并过程中的冲突。
+
++ A开始准备一次发布
+
+![](Image/3_3.png)
+
+A创建一个新的release分支来做产品发布的准备工作。在这一步，发布的版本号也最初确定下来。
+       git checkout -b release-0.1 develop
+　　这个分支专门用于发布前的准备，包括一些清理工作、全面的测试、文档的更新以及任何其他的准备工作。它与用于功能开发的分支相似，不同之处在于它是专为产品发布服务的。
+一旦A创建了这个分支并把它推向中央仓库，这次产品发布包含的功能也就固定下来了。任何还处于开发状态的功能只能等待下一个发布周期。
+
++ A完成了发布
+
+![](Image/3_4.png)
+
+一切准备就绪之后，A就要把发布分支合并入master和develop分支，然后再将发布分支删除。注意，往develop分支的合并是很重要的，因为开发人员可能在发布分支上修复了一些关键的问题，而这些修复对于正在开发中的新功能是有益的。
+
+~~~
+git checkout master
+git merge release-0.1
+git push
+git checkout develop
+git merge release-0.1
+git push
+git branch -d release-0.1
+~~~
+
+发布分支扮演的角色是功能开发（develop）与官方发布（master）之间的一个缓冲。无论什么时候你把一些东西合并入master，你都应该随即打上合适的标签。
+
+~~~
+git tag -a 0.1 -m"Initial public release" master
+git push --tags
+~~~
+
++ 用户发现了一个bug
+
+![](Image/3_5.png)
+
+基于master创建了一个用于维护的分支。在这个分支上修复了那个bug，然后把改动的代码直接合并入master
+
+~~~
+git checkout -b issue-#001 master
+# Fix the bug
+git checkout master
+git merge issue-#001
+git push
+~~~
+
+跟用于发布的分支一样，在维护分支上的改动也需要合并入develop分支，这一点是很重要的！因此，务必不能忘了这一步。随后，她就可以将维护分支删除。
+
+~~~
+git checkout develop
+git merge issue-#001
+git push
+git branch -d issue-#001
+~~~

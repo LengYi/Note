@@ -30,6 +30,7 @@ iOS 开发常用工具教程，开发方案笔记总结
 	* 4.4 [枚举进阶](https://github.com/LengYi/Note/blob/master/4.0/4.4/Enum.md)
 	* 4.5 [延迟加载方法](https://github.com/LengYi/Note/blob/master/4.0/4.5/DelayExcuse.md)
 	* 4.6 [通知](4.0/4.6/NotificationCenter.md)
+	* [UIViewController 容器的使用](4.0/容器/viewcontroller.md)
 * 5.0 技术书籍
 	* 5.1 Swift
 		* 5.1.1 [TheSwiftProgrammingLanguage中文完整版](https://github.com/LengYi/Note/blob/master/5.0/5.1/5.1.1/TheSwiftProgrammingLanguage中文完整版.pdf) 
@@ -53,4 +54,6 @@ iOS 开发常用工具教程，开发方案笔记总结
 * 性能监控
 	* [Firebase之Crashlytics 崩溃收集](性能监控/Crash/FirebaseCrashlytics.md)	 	
 * 规范
-	* [代码管理规范](规范/代码管理规范/git.md)	  
+	* [代码管理规范](规范/代码管理规范/git.md)
+* 加解密
+	* [AES 加解密](Se) 	  
